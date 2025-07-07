@@ -31,7 +31,7 @@ function SeatLayout() {
     if(!selectedTime){
       return Toast("Please select time first")
     }
-    if(!selectedSeats.includes(seatId) && selectedSeats.length > 5){
+    if(!selectedSeats.includes(seatId) && selectedSeats.length >= 5){
       return Toast("You can select maximum 5 seats")
     }
     selectedSeats.includes(seatId) ? setSelectedSeats(prev => prev.filter((seat) => seat !== seatId))
